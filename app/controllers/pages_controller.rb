@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def show
-    @title = "Show Pages"
+    @title = "Restaurant Prototype Home Page"
   end
 
 end
