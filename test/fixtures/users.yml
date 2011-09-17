@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  company: MyString
+  email: MyString
+  date_joined: 2011-09-17
+  admin_name: MyString
+
+two:
+  company: MyString
+  email: MyString
+  date_joined: 2011-09-17
+  admin_name: MyString

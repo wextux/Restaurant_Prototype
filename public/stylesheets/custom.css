@@ -2,23 +2,26 @@
 	width: 710px;
 }
 body {
-	background: #cff;
+	background: #242121;
 }
 header { 
 	padding-top: 20px;
 }
 header img { 
 	padding: 1em; 
-	background: #fff;
+	background: #463F3F;
 }
 
 section { 
 	margin-top: 1em; 
 	font-size: 120%; 
 	padding: 20px; 
-	background: #fff;
+	color: white;
+	background: #463F3F;
 }
 section h1 { 
+	color: white;
+	text-decoration: bold;
 	font-size: 200%;
 }
 
@@ -41,7 +44,7 @@ nav {
 	float: right;
 }
 nav {
-	background-color: white; 
+	background-color: #463F3F; 
 	padding: 0 0.7em; 
 	white-space: nowrap;
 }
