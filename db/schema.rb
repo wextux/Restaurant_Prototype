@@ -54,10 +54,9 @@ ActiveRecord::Schema.define(:version => 20110917200924) do
   create_table "users", :force => true do |t|
     t.string   "company",            :null => false
     t.string   "email",              :null => false
-    t.date     "date_joined",        :null => false
-    t.string   "admin_name",         :null => false
     t.string   "encrypted_password", :null => false
     t.string   "salt",               :null => false
+    t.date     "date_joined",        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
