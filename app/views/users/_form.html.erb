@@ -1,9 +1,9 @@
 <%= semantic_form_for [@user] do |form| %>
-  <%= form.inputs "Role" do %>
+  <%= form.inputs "New User" do %>
     <%= form.input :company %>
     <%= form.input :email %>
     <%= form.input :password %>
-	<%= form.input :password_confirmation %>
+	<%= form.input :password_confirmation, :label => "Confirm" %>
   <% end %>
 
   <%= form.buttons %>

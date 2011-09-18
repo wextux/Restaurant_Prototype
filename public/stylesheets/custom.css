@@ -120,7 +120,7 @@ td.sidebar {
 	width: 30%; 
 	padding: 1em; 
 	vertical-align: top; 
-	background: #ffc;
+	background: #274E7D;
 }
 
 .profile img.gravatar { 
@@ -173,3 +173,21 @@ div.field, div.actions {
 	list-style: square;
 }
 
+/*Restaurants Page*/
+
+.restaurant {
+  display: block;
+}
+
+.restaurant .restaurant-name {
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+  padding: 6px 0 4px 6px;
+  color: #ccc;
+}
+.restaurant .restaurant-description {
+  display: block;
+  color: #999;
+  padding: 0 0 4px 6px;
+}
