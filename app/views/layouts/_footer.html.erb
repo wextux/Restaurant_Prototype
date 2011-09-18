@@ -1,8 +1,15 @@
-<footer>
-    <nav class="round">
-        <ul>
-            <li><%= link_to "About", '#' %></li>
-            <li><%= link_to "Contact", '#' %></li>
-        </ul> 
-    </nav>
-</footer>
+<div id="footer">
+	<div id="flinks"> 
+		<a><%= link_to "About Us", '#' %></a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a><%= link_to "Contact Us", '#' %></a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a><%= link_to "Careers", '#' %></a>
+	</div>
+	<div id="termslinks">
+		 <a><%= link_to "Privacy", '#' %></a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+         <a><%= link_to "Terms of Service", '#' %></a>
+	</div>   
+    <div id="designedby">
+		<a>Designed By : Will Fairclough</a> 
+		<a><%= debug(params) if Rails.env.development? %></a>
+	</div>
+</div>

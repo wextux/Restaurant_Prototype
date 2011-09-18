@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <title><%= title%></title>
@@ -7,16 +9,13 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<div class="container">
-		<%= render 'layouts/header' %> 
-		<section class="round">
-			<% flash.each do |key, value| %>
-			<div class="flash <%= key %>"><%= value %></div>
-			<% end %>	
-			<%= yield %>
-		</section>
+	<div id="wrapper" align="center">
+		<%= render 'layouts/topbar'%>
+		<%= render 'layouts/toplinks'%>
+		<%= render 'layouts/header'%>
+		<%= render 'layouts/bottombody'%>
+		<%= render 'layouts/bottomcurve'%>
 		<%= render 'layouts/footer' %>
-		<%= debug(params) if Rails.env.development? %>
     </div>
 </body>
 </html>

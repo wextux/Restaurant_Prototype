@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update]
-  before_filter :correct_user, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:show, :edit, :update]
+  before_filter :correct_user, :only => [:show, :edit, :update]
   
   def show
     @user = User.find(params[:id])
@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     def correct_user
       @user = User.find(params[:id])
       if current_user != @user
+        flash[:error] = "Permissions Denied!"
         redirect_to(root_path)
       end
     end
