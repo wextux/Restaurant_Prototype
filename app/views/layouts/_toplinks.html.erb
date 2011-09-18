@@ -1,6 +1,13 @@
 <div id="toplinks"> 
 	<a><%= link_to "Home", root_path %></a> 
-	<a><%= link_to "Tour", '#' %></a> 
-	<a><%= link_to "Examples", '#' %></a> 
-	<a><%= link_to "Pricing & Signup", :signup %></a>
+	<% if signed_in? %>
+		<a><%= link_to "Manage Restaurants", restaurants_path %></a> 
+		<a><%= link_to "User Settings", "/users/#{current_user.id}" %></a> 
+		<a><%= link_to "Account", restaurants_path %></a> 
+	<% else %>
+		<a><%= link_to "Tour", '#' %></a> 
+		<a><%= link_to "Examples", '#' %></a> 
+		<a><%= link_to "Pricing & Signup", :signup %></a>
+	<% end %>
+
 </div>
