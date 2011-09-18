@@ -16,7 +16,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: postgres://ebeatkeinl:DQH5pWbkYZPYfUKvaWYS@ec2-107-20-191-45.compute-1.amazonaws.com/ebeatkeinl
   pool: 5
   timeout: 5000
