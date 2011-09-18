@@ -33,6 +33,8 @@ module SessionsHelper
   def sign_out
     cookies.delete(:remember_token)
     current_user = nil
+    flash[:success] = "Log off was successful"
+
   end
   
   private

@@ -4,10 +4,12 @@ RestaurantPrototype::Application.routes.draw do
   resources :restaurants
   
   
-  match '/signup',        :to => 'users#new',     :as => :signup
-  match '/signin',        :to => 'sessions#new',  :as => :signin
-  match '/signout',       :to => 'sessions#destroy'
-  match 'restaurants/:id', :to => 'restaurants#show'
+  match '/signup',          :to => 'users#new'
+  match '/signin',          :to => 'sessions#new'
+  match '/signout',         :to => 'sessions#destroy'
+  match '/restaurants',     :to => 'restaurants#index' 
+  match '/restaurants/:id', :to => 'restaurants#show'
+  match '/users/:id',       :to => 'users#show'
   
   
   root :to => "pages#show"
