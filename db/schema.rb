@@ -25,19 +25,20 @@ ActiveRecord::Schema.define(:version => 20110917200924) do
   end
 
   create_table "menu_items", :force => true do |t|
-    t.string   "type",        :null => false
-    t.string   "name",        :null => false
-    t.float    "price",       :null => false
+    t.integer  "menu_id",        :null => false
+    t.string   "menu_item_type", :null => false
+    t.string   "name",           :null => false
+    t.float    "price",          :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "menus", :force => true do |t|
-    t.string   "type",          :null => false
-    t.string   "name",          :null => false
-    t.integer  "restaurant_id", :null => false
-    t.boolean  "is_visible"
+    t.integer  "restaurant_id",                   :null => false
+    t.string   "menu_type",                       :null => false
+    t.string   "name",                            :null => false
+    t.boolean  "is_visible",    :default => true
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

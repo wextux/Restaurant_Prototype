@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :company, :email, :password, :password_confirmation, :date_joined
   
+  has_many :restaurants
+  
   validates :company, :presence => true,
                       :length => { :maximum => 50 }
   
