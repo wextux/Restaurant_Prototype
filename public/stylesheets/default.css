@@ -85,7 +85,7 @@ hr {
 	width: 920px;
 	height: 68px;
 	padding: 0px 30px;
-	background: url(images/subpage1_01.jpg) no-repeat left top;
+	background: url(images/header-pg.png) no-repeat left top;
 }
 
 /** MENU */
@@ -140,6 +140,65 @@ hr {
 }
 
 #menu li.active span {
+	background: url(images/homepage03.gif) no-repeat left top;
+	font-weight: bold;
+}
+
+
+
+/** MENU SMALL ADDED*/
+
+#menu-small {
+	background: url(images/small-menu-bg.png) top;
+	float: right;
+	width: 154px;
+	height: 25px;
+}
+
+#menu-small ul {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu-small li {
+	float: right;
+	margin-right: 20px;
+}
+
+#menu-small span {
+	float: left;
+	display: block;
+	height: 25px;
+	margin: 0px;
+	padding: 6px 8px 0px 0px;
+	color: #FFFFFF;
+}
+
+#menu-small a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #374e0e;
+	/*text-transform: lowercase;*/
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+#menu-small a:hover {
+	text-decoration: underline;
+}
+
+#menu-small li.active {
+	background: url(images/homepage04.gif) repeat-x left top;
+}
+
+#menu-small li.active a {
+	background: url(images/homepage05.gif) no-repeat right top;
+}
+
+#menu-small li.active span {
 	background: url(images/homepage03.gif) no-repeat left top;
 	font-weight: bold;
 }
