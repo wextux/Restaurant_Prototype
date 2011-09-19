@@ -1,0 +1,10 @@
+<div id="banner">
+	<div id="cols1">
+		<p class="byline">Manage Your Restaurants</p>
+		<h2>Company: <%=current_user.company%></h2>
+	</div>
+</div>
+
+<% flash.each do |key, value| %>
+	<div class="flash <%= key %>"><%= value %></div>
+<% end %>
