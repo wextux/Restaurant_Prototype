@@ -1,7 +1,5 @@
-<!--<!DOCTYPE html>-->
-<?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title><%= title%></title>
   <%= render 'layouts/stylesheets' %>
@@ -9,14 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<div id="wrapper" align="center">
-		<%= render 'layouts/topbar'%>
-		<%= render 'layouts/toplinks'%>
-		<%= render 'layouts/header'%>
-		<%= render 'layouts/bottombody'%>
-		<%= render 'layouts/bottomcurve'%>
-		<%= render 'layouts/footer' %>
+	<div id="wrapper">
+		<div id="wrapper-bgtop">
+			<%= render 'layouts/header'%>
+			<%= render 'layouts/logo'%>
+			<%= render 'layouts/page'%>
+		</div>
     </div>
+
+	<%= render 'layouts/footer' %>
 </body>
 </html>
 

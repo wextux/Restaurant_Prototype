@@ -1,0 +1,86 @@
+<div id="menu">
+	<ul>
+		<!--HOME MENU ITEM-->
+		<%  if active_page(root_url) %>
+			<%=tag("li", :class => active_page(root_url), :escape => true) %>
+				<a><%= link_to content_tag(:span, "Home"), root_path %></a>
+			</li>
+		<% else %>
+			<li><a><%= link_to content_tag(:span, "Home"), root_path %></a></li>
+		<% end %>
+		
+		
+		
+		<% if signed_in? %>
+			<!--MANAGE RESTAURANT MENU ITEM-->
+			<%  if active_page(restaurants_path) %>
+				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Manage Restaurants"), restaurants_path %></a>
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "Manage Restaurants"), restaurants_path %></a></li>
+			<% end %>
+			
+			<!--USER SETTINGS MENU ITEM-->
+			<%  if active_page("/users/#{current_user.id}") %>
+				<%=tag("li", :class => active_page("/users/#{current_user.id}"), :escape => true) %>
+					<a><%= link_to content_tag(:span, "User Settings"), "/users/#{current_user.id}" %></a>
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "User Settings"), "/users/#{current_user.id}" %></a></li>
+			<% end %>
+			
+			<!--ACCOUNT MENU ITEM-->
+			<%  if active_page(restaurants_path) %>
+				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Account"), restaurants_path %></a>
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "Account"), restaurants_path %></a></li>
+			<% end %>
+			
+			<!--LOGOFF MENU ITEM-->
+			<li><a><%= link_to content_tag(:span, "Log Off"), :signout %></a></li>
+
+			
+		<% else %>
+			<!--TOUR MENU ITEM-->
+			<%  if active_page(restaurants_path) %>
+				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Tour"), restaurants_path %></a>
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "Tour"), restaurants_path %></a></li>
+			<% end %>
+		
+			<!--EXAMPLES MENU ITEM-->
+			<%  if active_page(restaurants_path) %>
+				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Examples"), restaurants_path %></a>
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "Examples"), restaurants_path %></a></li>
+			<% end %>
+		
+			<!--PRICING & SIGN UP MENU ITEM-->
+			<%  if active_page(signup_path) %>
+				<%=tag("li", :class => active_page(signup_path), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Pricing & Sign up"), signup_path %></a>
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "Pricing & Sign up"), signup_path %></a></li>
+			<% end %>
+			
+			<!--LOGIN MENU ITEM-->
+			<%  if active_page(:signin) %>
+				<%=tag("li", :class => active_page(:signin), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Log In"), :signin %></a> 
+				</li>
+			<% else %>
+				<li><a><%= link_to content_tag(:span, "Log In"), :signin %></a></li>
+			<% end %>
+		<% end %>
+		
+
+	</ul>
+</div>
