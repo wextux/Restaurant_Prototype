@@ -1,4 +1,4 @@
-<h2 class="title"><%= restaurant.name %></h2>
+<h2 class="title"><%= link_to restaurant.name, "restaurants/#{restaurant.id}" %></h2>
 
 <div class="image-style3 image-style3a"><img src="images/mockup-images/pics09.jpg" width="220" height="120" alt="" /><span></span></div>
 	<p><%= restaurant.description %></p>
