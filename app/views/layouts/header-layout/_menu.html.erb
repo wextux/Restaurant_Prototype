@@ -46,12 +46,12 @@
 			<% end %>
 			
 			<!--ACCOUNT MENU ITEM-->
-			<%  if active_page(restaurants_path) %>
+			<%  if active_page('#') %>
 				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
-					<a><%= link_to content_tag(:span, "Account"), restaurants_path %></a>
+					<a><%= link_to content_tag(:span, "Account"), '#' %></a>
 				</li>
 			<% else %>
-				<li><a><%= link_to content_tag(:span, "Account"), restaurants_path %></a></li>
+				<li><a><%= link_to content_tag(:span, "Account"), '#' %></a></li>
 			<% end %>
 			
 
