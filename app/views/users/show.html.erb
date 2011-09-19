@@ -1,9 +1,5 @@
-<table class="profile" summary="Profile information"> 
-	<tr>
-		<td class="main"> <h1>
-			<%= @user.company %> </h1>
-		</td>
-		<td class="sidebar round">
-			<strong>Name</strong> <%= @user.company %><br />
-  		</tr>
-</table>
+<%= render 'banner' %>
+
+<p>Company: <%= @user.company %></p>
+<p>Email: <%= @user.email %></p>
+<p>Date Joined: <%= @user.date_joined %></p>

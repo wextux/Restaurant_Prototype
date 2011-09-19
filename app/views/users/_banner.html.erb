@@ -1,10 +1,10 @@
 <div id="banner">
 	<div id="cols1">
-		<p class="byline">Create your tablet menu</p>
-		<h2>starts at $5/month</h2>
+		<p class="byline">User Settings</p>
+		<h2><%= @user.company %></h2>
 	</div>
 	<div id="cols2">
-		<p class="link">Sign Up Today</p>
+		<p class="link"><a><%= link_to "Edit", "#{@user.id}/edit" %></a></p>
 	</div>
 </div>
 
