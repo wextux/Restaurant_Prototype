@@ -33,6 +33,7 @@ class MenuDevicesController < ApplicationController
     @notification.save
     APN::Notification.send_notifications
     flash[:success] = "Message Sent!"
+    @devices = APN::Device.all
     render 'show'
   end
 
