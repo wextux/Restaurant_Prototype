@@ -43,7 +43,7 @@ class MenuDevicesController < ApplicationController
   end
 
   def show
-    
+    @devices = APN::Device.all
   end
 
 end
