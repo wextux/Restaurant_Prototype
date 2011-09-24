@@ -57,21 +57,21 @@
 
 		<% else %>
 			<!--TOUR MENU ITEM-->
-			<%  if active_page(restaurants_path) %>
-				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
-					<a><%= link_to content_tag(:span, "Tour"), restaurants_path %></a>
+			<%  if active_page('#') %>
+				<%=tag("li", :class => active_page('#'), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Tour"), '#' %></a>
 				</li>
 			<% else %>
-				<li><a><%= link_to content_tag(:span, "Tour"), restaurants_path %></a></li>
+				<li><a><%= link_to content_tag(:span, "Tour"), '#' %></a></li>
 			<% end %>
 		
 			<!--EXAMPLES MENU ITEM-->
-			<%  if active_page(restaurants_path) %>
-				<%=tag("li", :class => active_page(restaurants_path), :escape => true) %>
-					<a><%= link_to content_tag(:span, "Examples"), restaurants_path %></a>
+			<%  if active_page('#') %>
+				<%=tag("li", :class => active_page('#'), :escape => true) %>
+					<a><%= link_to content_tag(:span, "Examples"), '#' %></a>
 				</li>
 			<% else %>
-				<li><a><%= link_to content_tag(:span, "Examples"), restaurants_path %></a></li>
+				<li><a><%= link_to content_tag(:span, "Examples"), '#' %></a></li>
 			<% end %>
 		
 			<!--PRICING & SIGN UP MENU ITEM-->

@@ -1,10 +1,12 @@
 RestaurantPrototype::Application.routes.draw do
+  require 'apn_on_rails'
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :restaurants
-  
+  resources :menu_devices
   
   match '/signup',          :to => 'users#new'
+  match '/registerdevice',  :to => 'menu_devices#new'
   match '/signin',          :to => 'sessions#new'
   match '/signout',         :to => 'sessions#destroy'
   match '/restaurants',     :to => 'restaurants#index' 

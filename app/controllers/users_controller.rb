@@ -25,6 +25,17 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  
+  def wscreate
+    @user = User.new(params[:user])
+    @user.date_joined = Date.today
+    if @user.save
+      puts 'it worked big time'
+    else  
+      puts 'failed big time'
+    end
+  end
+  
 
   def edit
     

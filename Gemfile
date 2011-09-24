@@ -7,6 +7,8 @@ gem 'rails', '3.0.10'
 
 gem 'sqlite3'
 gem 'formtastic'
+gem 'apn_on_rails', :git => 'https://github.com/natescherer/apn_on_rails.git', :branch => 'rails3'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

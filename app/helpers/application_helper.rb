@@ -26,5 +26,7 @@ module ApplicationHelper
       return nil
     end
   end
+  
+  
 
 end
