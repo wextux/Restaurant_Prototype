@@ -5,13 +5,15 @@ RestaurantPrototype::Application.routes.draw do
   resources :restaurants
   resources :menu_devices
   
-  match '/signup',          :to => 'users#new'
-  match '/registerdevice',  :to => 'menu_devices#new'
-  match '/signin',          :to => 'sessions#new'
-  match '/signout',         :to => 'sessions#destroy'
-  match '/restaurants',     :to => 'restaurants#index' 
-  match '/restaurants/:id', :to => 'restaurants#show'
-  match '/users/:id',       :to => 'users#show'
+  match '/signup',            :to => 'users#new'
+  match '/registerdevice',    :to => 'menu_devices#new'
+  match '/show_notification', :to => 'menu_devices#show'
+  match '/send_notification', :to => 'menu_devices#create'
+  match '/signin',            :to => 'sessions#new'
+  match '/signout',           :to => 'sessions#destroy'
+  match '/restaurants',       :to => 'restaurants#index' 
+  match '/restaurants/:id',   :to => 'restaurants#show'
+  match '/users/:id',         :to => 'users#show'
   
   
   root :to => "pages#show"

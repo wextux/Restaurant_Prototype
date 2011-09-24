@@ -1,2 +1,13 @@
-<h1>MenuDevice#show</h1>
-<p>Find me in app/views/menu_device/show.html.erb</p>
+<%= render 'banner' %>
+<%= form_tag("/send_notification", :method => "get") do %>
+	<%= label_tag("Send Push Notification:")%>
+  	<%= label_tag(:msg, "Message:") %>
+  	<%= text_field_tag(:msg) %>
+	<%= label_tag(:d, "device id:") %>
+  	<%= text_field_tag(:d) %>
+	<%= label_tag(:s, "Sound:") %>
+  	<%= text_field_tag(:s) %>
+	<%= label_tag(:b, "Badge:") %>
+  	<%= text_field_tag(:b) %>
+  	<%= submit_tag("Send") %>
+<% end %>

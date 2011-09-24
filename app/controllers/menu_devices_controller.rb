@@ -25,7 +25,15 @@ class MenuDevicesController < ApplicationController
   end
   
   def create
-
+    @notification = APN::Notification.new 
+    @notification.device_id = params[:d]
+    @notification.badge = params[:b]
+    @notification.sound = params[:s]
+    @notification.alert = params[:msg]
+    @notification.save
+    APN::Notification.send_notifications
+    flash[:success] = "Message Sent!"
+    render 'show'
   end
 
   def edit
@@ -35,6 +43,7 @@ class MenuDevicesController < ApplicationController
   end
 
   def show
+    
   end
 
 end
