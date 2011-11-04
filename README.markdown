@@ -1,5 +1,7 @@
 == Restaurant iPad Menu App Server
 
+The Rails site is hosted on Heroku at http://restproto.heroku.com/ as a production test.
+
 This is my first stab at a Ruby on Rails application. The point of the application is to host a Menu Designer application that will sync with the partner iPad application. You will be able to manage your restaurants with this web application such as adding menus, menu items, new restaurants, menu Devices. 
 
 
