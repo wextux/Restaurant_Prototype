@@ -4,6 +4,7 @@ This is my first stab at a Ruby on Rails application. The point of the applicati
 
 
 == The Basic Idea
+
 When a group arrives at a restaurant they will be given an iPad that is logged into the rails application. The guests can then view the different Menu types by choosing the different tabs at the bottom of the app. There will be a UITableView that will list the Menu Items for the given menu type. The guest can then add the meals that they would like into the order and then push that order off to the kitchen when they are ready. 
 
 The kitchen will have a computer that is logged into the Rails application where they can view the orders coming in. Any special request that are made from the iPad Menu can be viewed by the Cooks in the kitchen.
